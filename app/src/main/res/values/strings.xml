@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Cash App</string>
+    <string name="add">ADD</string>
+    <string name="del">DEL</string>
+</resources>
