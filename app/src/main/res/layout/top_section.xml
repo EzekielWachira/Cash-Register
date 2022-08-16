@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:gravity="center_horizontal|end"
+    android:orientation="vertical"
+    android:id="@+id/top"
+    android:paddingHorizontal="10dp"
+    android:layout_height="150dp">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@android:color/transparent"
+        android:hint="KSH 0.00"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+        android:textColorHint="@color/grey_800"
+        android:textSize="25sp"
+        android:enabled="false"
+        android:id="@+id/numberField"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
