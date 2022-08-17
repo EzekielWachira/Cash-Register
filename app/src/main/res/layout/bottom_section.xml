@@ -70,6 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="KSH"
+            android:visibility="gone"
             android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
             android:textColor="@color/white"
             android:textSize="18sp" />

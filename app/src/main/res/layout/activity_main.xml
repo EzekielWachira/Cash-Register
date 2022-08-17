@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/wheat"
     tools:context=".ui.MainActivity">
 
     <include
@@ -37,7 +38,7 @@
                 android:gravity="center"
                 android:text="1"
                 android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                android:textColor="@color/grey_800"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
             <View
@@ -54,7 +55,7 @@
                 android:gravity="center"
                 android:text="2"
                 android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                android:textColor="@color/grey_800"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
             <View
@@ -71,7 +72,7 @@
                 android:gravity="center"
                 android:text="3"
                 android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                android:textColor="@color/grey_800"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -96,7 +97,7 @@
                 android:gravity="center"
                 android:text="4"
                 android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                android:textColor="@color/grey_800"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
             <View
@@ -113,7 +114,7 @@
                 android:gravity="center"
                 android:text="5"
                 android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                android:textColor="@color/grey_800"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
             <View
@@ -130,7 +131,7 @@
                 android:gravity="center"
                 android:text="6"
                 android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                android:textColor="@color/grey_800"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -155,7 +156,7 @@
                 android:gravity="center"
                 android:text="7"
                 android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                android:textColor="@color/grey_800"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
             <View
@@ -172,7 +173,7 @@
                 android:gravity="center"
                 android:text="8"
                 android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                android:textColor="@color/grey_800"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
             <View
@@ -189,7 +190,7 @@
                 android:gravity="center"
                 android:text="9"
                 android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                android:textColor="@color/grey_800"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -214,7 +215,7 @@
                 android:gravity="center"
                 android:text="@string/del"
                 android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                android:textColor="@color/grey_800"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
             <View
@@ -231,7 +232,7 @@
                 android:gravity="center"
                 android:text="0"
                 android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                android:textColor="@color/grey_800"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
             <View
@@ -248,7 +249,7 @@
                 android:gravity="center"
                 android:text="@string/add"
                 android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                android:textColor="@color/grey_800"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
         </LinearLayout>
