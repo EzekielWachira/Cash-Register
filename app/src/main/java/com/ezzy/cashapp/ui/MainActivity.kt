@@ -1,8 +1,6 @@
 package com.ezzy.cashapp.ui
 
 import android.os.Bundle
-import android.view.View
-import android.view.ViewTreeObserver
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -37,7 +35,7 @@ class MainActivity : AppCompatActivity() {
     private fun setUpRecyclerView() {
         binding.bottomSection.entriesRecyclerView.apply {
             layoutManager = LinearLayoutManager(this@MainActivity).apply {
-                reverseLayout  = true
+                reverseLayout = true
             }
             adapter = cashEntryAdapter
         }
@@ -79,9 +77,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Save the amount to the local database
+     */
     private fun saveEntry() {
+        //Check if number string is empty before saving it to local database
         if (numberString.isEmpty()) return
 
+        //Check if string code is less that 0 or greater than 1000000
         if (numberString.toFloat() <= 0f && numberString.toFloat() > MAX_AMOUNT) {
             return
         }
@@ -90,16 +93,22 @@ class MainActivity : AppCompatActivity() {
 
         val entry = CashEntry(amount = numberString.toFloat())
         cashEntryViewModel.addEntry(entry)
-        clearAllPin()
+        clearAllCharacters()
     }
 
+    /**
+     * listen when user clicks on a button to get the string code
+     * for the clicked button
+     */
     private fun listenCharacterChanges(button: TextView) {
+        //Make sure the number string is not greater than 1000000
         if (numberString.isNotEmpty() && numberString.toFloat() > MAX_AMOUNT) {
             return
         }
 
         getStringCode(button)
 
+        //if number string is 0, clear it since we cannot save 0 values
         if (numberString.toFloat() == 0f) {
             numberString = emptyString
             return
@@ -121,6 +130,9 @@ class MainActivity : AppCompatActivity() {
         } else return
     }
 
+    /**
+     * Get the string code for the clicked number button
+     */
     private fun getStringCode(button: TextView) {
         when (button.id) {
             R.id.text0 -> numberString += "0"
@@ -136,6 +148,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Remove the last character from the number string
+     * (The right most character / Last character added)
+     * on pressing delete button
+     */
     private fun clearCharacters() {
         if (numberString.isNotEmpty()) {
             numberString = removeLastChar(numberString)
@@ -155,6 +172,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Remove the last character from the number string
+     * (The right most character / Last character added)
+     * on pressing delete button
+     */
     private fun removeLastChar(s: String?): String {
         if (s == null || s.isEmpty()) {
             return s!!
@@ -162,7 +184,10 @@ class MainActivity : AppCompatActivity() {
         return s.substring(0, s.length - 1)
     }
 
-    private fun clearAllPin() {
+    /**
+     * Clear all characters from the created number string
+     */
+    private fun clearAllCharacters() {
         if (numberString.isNotEmpty()) {
             for (str in numberString.indices) {
                 numberString = removeLastChar(numberString)
