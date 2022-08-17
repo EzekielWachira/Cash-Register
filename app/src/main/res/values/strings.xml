@@ -2,4 +2,6 @@
     <string name="app_name">Cash App</string>
     <string name="add">ADD</string>
     <string name="del">DEL</string>
+    <string name="amt">KSH %1$.2f</string>
+    <string name="no_entries_add_some">No entries, add some</string>
 </resources>
