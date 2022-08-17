@@ -42,6 +42,7 @@
         android:id="@+id/entriesRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layoutAnimation="@anim/layout_animation_slide_from_bottom"
         app:layout_constraintBottom_toTopOf="@id/divider"
         app:layout_constraintTop_toTopOf="parent"
         tools:itemCount="5"

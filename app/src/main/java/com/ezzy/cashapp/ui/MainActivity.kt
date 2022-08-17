@@ -2,6 +2,7 @@ package com.ezzy.cashapp.ui
 
 import android.os.Bundle
 import android.view.View
+import android.view.ViewTreeObserver
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -39,7 +40,6 @@ class MainActivity : AppCompatActivity() {
                 reverseLayout  = true
             }
             adapter = cashEntryAdapter
-
         }
     }
 
@@ -82,9 +82,11 @@ class MainActivity : AppCompatActivity() {
     private fun saveEntry() {
         if (numberString.isEmpty()) return
 
-        if (numberString.toFloat() <= 0 && numberString.toFloat() > MAX_AMOUNT) {
+        if (numberString.toFloat() <= 0f && numberString.toFloat() > MAX_AMOUNT) {
             return
         }
+
+        if (numberString.toFloat() == 0f) return
 
         val entry = CashEntry(amount = numberString.toFloat())
         cashEntryViewModel.addEntry(entry)
@@ -92,7 +94,28 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun listenCharacterChanges(button: TextView) {
+        if (numberString.isNotEmpty() && numberString.toFloat() > MAX_AMOUNT) {
+            return
+        }
+
         getStringCode(button)
+
+        if (numberString.toFloat() == 0f) {
+            numberString = emptyString
+            return
+        }
+
+        if (numberString.toFloat() > MAX_AMOUNT) {
+            numberString = emptyString
+            binding.topSection.numberField.setText(
+                getString(
+                    R.string.amt,
+                    0f
+                )
+            )
+            return
+        }
+
         if (numberString.toFloat() > 0 && numberString.toFloat() <= MAX_AMOUNT) {
             binding.topSection.numberField.setText(getString(R.string.amt, numberString.toFloat()))
         } else return
@@ -152,5 +175,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+    private val emptyString = ""
 }
 
