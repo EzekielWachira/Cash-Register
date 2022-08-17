@@ -1,0 +1,35 @@
+commit 846a85083e4c560f00c5db54bb472ce76ae39438
+Author: EzekielWachira <ezekielwachira048@gmail.com>
+Date:   Wed Aug 17 23:55:27 2022 +0300
+
+    Add comments
+
+commit 9293dee1fc572d3ffc6c06d732e9f10f92671b75
+Author: EzekielWachira <ezekielwachira048@gmail.com>
+Date:   Wed Aug 17 23:45:18 2022 +0300
+
+    Change App Colors
+
+commit 2f63554a3eef09b19d2e3dabdbe69200890f27d6
+Author: EzekielWachira <ezekielwachira048@gmail.com>
+Date:   Wed Aug 17 23:27:27 2022 +0300
+
+    prevent values over 1000000
+
+commit 110acd6a3040aefec3f4db895a3af220fdc3f012
+Author: EzekielWachira <ezekielwachira048@gmail.com>
+Date:   Wed Aug 17 21:37:16 2022 +0300
+
+    Save entries to local database
+
+commit 9781c57151ef1c349b3ffeea84d231de1c7155e6
+Author: EzekielWachira <ezekielwachira048@gmail.com>
+Date:   Wed Aug 17 00:51:44 2022 +0300
+
+    Design UI Components
+
+commit 2325e2685912c079d9ee12a3ba48c9c1bba19824
+Author: EzekielWachira <ezekielwachira048@gmail.com>
+Date:   Wed Aug 17 00:09:31 2022 +0300
+
+    Initial Commit
